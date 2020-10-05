@@ -17,6 +17,7 @@ RUN php artisan key:generate
 
 RUN sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=pgsql/' .env
 RUN sed -i 's/DB_DATABASE=laravel/DB_DATABASE=postgres/' .env
+RUN sed -i 's/DB_HOST=127.0.0.1/DB_HOST=postgres/' .env
 RUN sed -i 's/DB_PORT=3306/DB_PORT=5433/' .env
 RUN sed -i 's/DB_USERNAME=root/DB_USERNAME=postgres/' .env
 RUN sed -i 's/DB_PASSWORD=/DB_PASSWORD=secret/' .env
